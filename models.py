@@ -15,11 +15,7 @@ def create_tables():
             amount DECIMAL(10, 2) NOT NULL,
             category VARCHAR(255) NOT NULL,
             note VARCHAR(255),
-        
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-            
-            
-            
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP  
          )           
     """)
     # Save the changes to the database
@@ -27,5 +23,5 @@ def create_tables():
     cursor.close()
     conn.close()
     print("Greetings Mr Madikgetla your data tables have been created.")
-    if __name__ == "__main__":
-        create_tables()
+if __name__ == "__main__":
+     create_tables()
