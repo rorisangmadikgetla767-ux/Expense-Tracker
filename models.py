@@ -8,14 +8,14 @@ def create_tables():
     # Get cursor to be able to read and write from the database
     cursor = conn.cursor()
     cursor.execute("""
-        CREATE TABLE IF NOT EXISTS users (
+        CREATE TABLE IF NOT EXISTS expenses (
             id SERIAL PRIMARY KEY,
-            user_id VARCHAR(255) NOT NULL,
+            user_id INTERGER  NOT NULL,
             title VARCHAR(255) NOT NULL,
-            amount VARCHAR(255) NOT NULL,
+            amount DECIMAL(10, 2) NOT NULL,
             category VARCHAR(255) NOT NULL,
-            note VARCHAR(255) NOT NULL,
-            advice VARCHAR(255) NOT NULL,
+            note VARCHAR(255),
+        
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             
             
